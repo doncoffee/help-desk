@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/help_desk?createDatabaseIfNotExist=true
+    username: postgres
+    password: pass
+    driver-class-name: org.postgresql.Driver
+
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351

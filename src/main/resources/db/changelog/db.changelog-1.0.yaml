@@ -1,0 +1,265 @@
+databaseChangeLog:
+  - changeSet:
+      author: doncoffee
+      id: create-categories-table
+      changes:
+        - createTable:
+            tableName: categories
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(128)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      author: doncoffee
+      id: create-users-table
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: firstname
+                  type: VARCHAR(255)
+              - column:
+                  name: lastname
+                  type: VARCHAR(255)
+              - column:
+                  name: role
+                  type: VARCHAR(32)
+                  defaultValue: EMPLOYEE
+              - column:
+                  name: email
+                  type: VARCHAR(64)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: VARCHAR(128)
+                  defaultValue: '{noop}123'
+
+  - changeSet:
+      author: doncoffee
+      id: create-tickets-table
+      changes:
+        - createTable:
+            tableName: tickets
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_on
+                  type: DATE
+              - column:
+                  name: desired_resolution_date
+                  type: DATE
+              - column:
+                  name: state
+                  type: VARCHAR(64)
+                  defaultValue: NEW
+              - column:
+                  name: urgency
+                  type: VARCHAR(64)
+                  defaultValue: AVERAGE
+              - column:
+                  name: assignee_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_tickets-assignee_id
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: owner_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_tickets-owner_id
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: approver_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_tickets-approver_id
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: category_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_tickets_category
+                    referencedTableName: categories
+                    referencedColumnNames: id
+
+  - changeSet:
+      author: doncoffee
+      id: create-feedbacks-table
+      changes:
+        - createTable:
+            tableName: feedbacks
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_feedbacks_user
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: rate
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: DATE
+              - column:
+                  name: text
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ticket_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_feedbacks_ticket
+                    referencedTableName: tickets
+                    referencedColumnNames: id
+  - changeSet:
+      author: doncoffee
+      id: create-comments-table
+      changes:
+        - createTable:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_comments_user
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: text
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: DATE
+              - column:
+                  name: ticket_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_comments_ticket
+                    referencedTableName: tickets
+                    referencedColumnNames: id
+
+  - changeSet:
+      author: doncoffee
+      id: create-attachments-table
+      changes:
+        - createTable:
+            tableName: attachments
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: blob
+                  type: BLOB
+              - column:
+                  name: ticket_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_attachments_ticket
+                    referencedTableName: tickets
+                    referencedColumnNames: id
+              - column:
+                  name: name
+                  type: VARCHAR(128)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      author: doncoffee
+      id: create-history-table
+      changes:
+        - createTable:
+            tableName: history
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: ticket_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_history_ticket
+                    referencedTableName: tickets
+                    referencedColumnNames: id
+              - column:
+                  name: date
+                  type: Date
+              - column:
+                  name: action
+                  type: VARCHAR(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_history_user
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
