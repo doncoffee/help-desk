@@ -67,9 +67,21 @@ public class Constants {
     /**
      * urls
      */
-    public static final String WHITE_LIST_URL = "/api/v1/auth/**";
+    public static final String[] WHITE_LIST_URL = {
+            "/api/v1/auth/**",
+            "/api/v1/**",
+            "/swagger-ui/index.html",
+    };
     public static final String POST_MAPPING_SIGNIN = "/signin";
     public static final String POST_MAPPING_SIGNUP = "/signup";
+    public static final String POST_MAPPING_LOGOUT = "/logout";
     public static final String AUTH_CONTROLLER_REQUEST_MAPPING = "/api/v1/auth";
+    public static final String HTTP_METHOD_OPTIONS_URL = "/**";
     public static final String UI_URL = "http://localhost:4200";
+
+    /**
+     * mapper messages
+     */
+    public static final String UNSUPPORTED_OPERATION_IN_CURRENT_MAPPER_CLASS = "Unsupported operation in current mapper class";
+
 }

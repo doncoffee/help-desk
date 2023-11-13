@@ -51,7 +51,7 @@ public class JwtServiceImpl implements JwtService {
                 .claims(extraClaims)
                 .subject(userDto.getEmail())
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24))
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24)) // being valid for the year
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
