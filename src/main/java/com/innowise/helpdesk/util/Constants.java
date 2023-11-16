@@ -78,6 +78,8 @@ public class Constants {
     public static final String AUTH_CONTROLLER_REQUEST_MAPPING = "/api/v1/auth";
     public static final String HTTP_METHOD_OPTIONS_URL = "/**";
     public static final String UI_URL = "http://localhost:4200";
+    public static final String FIND_MY_TICKETS_URL = "/personal";
+    public static final String TICKET_CONTROLLER_PATH = "/api/v1/tickets";
 
     /**
      * mapper messages
