@@ -3,7 +3,7 @@ package com.innowise.helpdesk.service.impl;
 import com.innowise.helpdesk.dto.UserDto;
 import com.innowise.helpdesk.entity.jwt.JwtAuthenticationResponse;
 import com.innowise.helpdesk.repo.UserRepository;
-import com.innowise.helpdesk.service.AuthenticationService;
+import com.innowise.helpdesk.service.jwt.AuthenticationService;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

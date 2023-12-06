@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TicketRepositoryCustom {
+public interface CustomTicketRepository {
 
     List<Ticket> findByOwnerId(User user);
     List<Ticket> findByOwnerIdAndState(User user, State state);

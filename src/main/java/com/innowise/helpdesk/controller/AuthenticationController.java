@@ -2,14 +2,13 @@ package com.innowise.helpdesk.controller;
 
 import com.innowise.helpdesk.dto.UserDto;
 import com.innowise.helpdesk.entity.jwt.JwtAuthenticationResponse;
-import com.innowise.helpdesk.service.AuthenticationService;
-import com.innowise.helpdesk.service.ResponseErrorValidationService;
-import com.innowise.helpdesk.service.TokenBlackList;
+import com.innowise.helpdesk.service.jwt.AuthenticationService;
+import com.innowise.helpdesk.service.jwt.ResponseErrorValidationService;
+import com.innowise.helpdesk.service.jwt.TokenBlackList;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
 import org.springframework.validation.BindingResult;

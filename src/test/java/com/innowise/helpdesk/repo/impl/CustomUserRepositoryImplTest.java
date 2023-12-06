@@ -4,7 +4,7 @@ import com.innowise.helpdesk.dto.UserDto;
 import com.innowise.helpdesk.entity.Role;
 import com.innowise.helpdesk.entity.User;
 import com.innowise.helpdesk.repo.UserRepository;
-import com.innowise.helpdesk.service.AuthenticationService;
+import com.innowise.helpdesk.service.jwt.AuthenticationService;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

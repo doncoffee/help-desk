@@ -4,7 +4,7 @@ import com.innowise.helpdesk.entity.State;
 import com.innowise.helpdesk.entity.Ticket;
 import com.innowise.helpdesk.entity.Urgency;
 import com.innowise.helpdesk.entity.User;
-import com.innowise.helpdesk.repo.custom.TicketRepositoryCustom;
+import com.innowise.helpdesk.repo.custom.CustomTicketRepository;
 import com.querydsl.core.types.Order;
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.dsl.CaseBuilder;
@@ -17,7 +17,7 @@ import java.util.List;
 
 import static com.innowise.helpdesk.entity.QTicket.ticket;
 
-public class TicketRepositoryImpl implements TicketRepositoryCustom {
+public class CustomTicketRepositoryImpl implements CustomTicketRepository {
 
     @PersistenceContext
     private EntityManager entityManager;

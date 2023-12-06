@@ -1,4 +1,4 @@
-package com.innowise.helpdesk.service;
+package com.innowise.helpdesk.service.jwt;
 
 import jakarta.servlet.http.HttpServletRequest;
 

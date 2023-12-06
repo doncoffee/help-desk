@@ -1,4 +1,4 @@
-package com.innowise.helpdesk.service;
+package com.innowise.helpdesk.service.jwt;
 
 import com.innowise.helpdesk.dto.UserDto;
 import org.springframework.security.core.userdetails.UserDetails;

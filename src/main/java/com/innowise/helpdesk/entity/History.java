@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import static com.innowise.helpdesk.util.Constants.*;
 
@@ -26,7 +26,8 @@ public class History {
     @JoinColumn(name = TICKET_ID)
     private Ticket ticket;
 
-    private LocalDate date;
+    @Column(name = DATE_TIME_COLUMN_NAME)
+    private LocalDateTime dateTime;
 
     private String action;
 

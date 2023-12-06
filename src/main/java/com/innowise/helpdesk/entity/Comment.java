@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import static com.innowise.helpdesk.util.Constants.*;
 
@@ -28,7 +28,8 @@ public class Comment {
 
     private String text;
 
-    private LocalDate date;
+    @Column(name = DATE_TIME_COLUMN_NAME)
+    private LocalDateTime dateTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = TICKET_ID)

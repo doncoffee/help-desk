@@ -1,6 +1,6 @@
-package com.innowise.helpdesk.service.impl;
+package com.innowise.helpdesk.service.jwt.impl;
 
-import com.innowise.helpdesk.service.TokenBlackList;
+import com.innowise.helpdesk.service.jwt.TokenBlackList;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

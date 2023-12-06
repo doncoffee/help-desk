@@ -2,7 +2,7 @@ package com.innowise.helpdesk.controller;
 
 import com.innowise.helpdesk.dto.TicketReadDto;
 import com.innowise.helpdesk.entity.Role;
-import com.innowise.helpdesk.service.TicketService;
+import com.innowise.helpdesk.service.tickets.TicketService;
 import com.innowise.helpdesk.util.MockUtil;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;

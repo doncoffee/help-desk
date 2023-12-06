@@ -5,6 +5,7 @@ import com.innowise.helpdesk.dto.UserDto;
 import com.innowise.helpdesk.entity.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class MockUtil {
 
@@ -35,7 +36,7 @@ public class MockUtil {
         return Ticket.builder()
                 .name("ticket_01")
                 .description("for fun")
-                .createdOn(LocalDate.now())
+                .createdOn(LocalDateTime.now())
                 .desiredResolutionDate(LocalDate.now())
                 .assigneeId(null)
                 .ownerId(null)
@@ -49,7 +50,7 @@ public class MockUtil {
         return Ticket.builder()
                 .name("ticket_01")
                 .description("for fun")
-                .createdOn(LocalDate.now())
+                .createdOn(LocalDateTime.now())
                 .desiredResolutionDate(LocalDate.now())
                 .assigneeId(null)
                 .ownerId(null)

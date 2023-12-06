@@ -2,7 +2,7 @@ package com.innowise.helpdesk.service.impl;
 
 import com.innowise.helpdesk.entity.User;
 import com.innowise.helpdesk.repo.UserRepository;
-import com.innowise.helpdesk.service.UserService;
+import com.innowise.helpdesk.service.jwt.UserService;
 import com.innowise.helpdesk.util.MockUtil;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;

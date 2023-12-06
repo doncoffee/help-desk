@@ -21,6 +21,7 @@ public class Attachment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Lob
     private byte[] blob;
 
     @ManyToOne(fetch = FetchType.LAZY)

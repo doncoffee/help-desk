@@ -1,6 +1,6 @@
-package com.innowise.helpdesk.service.impl;
+package com.innowise.helpdesk.service.jwt.impl;
 
-import com.innowise.helpdesk.service.ResponseErrorValidationService;
+import com.innowise.helpdesk.service.jwt.ResponseErrorValidationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

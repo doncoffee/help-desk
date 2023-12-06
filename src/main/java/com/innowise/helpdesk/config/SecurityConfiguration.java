@@ -1,6 +1,6 @@
 package com.innowise.helpdesk.config;
 
-import com.innowise.helpdesk.service.UserService;
+import com.innowise.helpdesk.service.jwt.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,11 +15,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.Arrays;
 
 import static com.innowise.helpdesk.util.Constants.HTTP_METHOD_OPTIONS_URL;
 import static com.innowise.helpdesk.util.Constants.WHITE_LIST_URL;

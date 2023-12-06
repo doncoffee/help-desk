@@ -1,7 +1,6 @@
 package com.innowise.helpdesk.config;
 
-import com.innowise.helpdesk.service.AuthenticationService;
-import com.innowise.helpdesk.service.TokenBlackList;
+import com.innowise.helpdesk.service.jwt.TokenBlackList;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
