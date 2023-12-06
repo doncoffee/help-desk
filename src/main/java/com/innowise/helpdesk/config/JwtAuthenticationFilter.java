@@ -1,7 +1,7 @@
 package com.innowise.helpdesk.config;
 
-import com.innowise.helpdesk.service.JwtService;
-import com.innowise.helpdesk.service.UserService;
+import com.innowise.helpdesk.service.jwt.JwtService;
+import com.innowise.helpdesk.service.jwt.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

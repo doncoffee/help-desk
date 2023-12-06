@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class Ticket {
     private String description;
 
     @Column(name = CREATED_ON)
-    private LocalDate createdOn;
+    private LocalDateTime createdOn;
 
     @Column(name = DESIRED_RESOLUTION_DATE)
     private LocalDate desiredResolutionDate;

@@ -1,4 +1,4 @@
-package com.innowise.helpdesk.service;
+package com.innowise.helpdesk.service.jwt;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;

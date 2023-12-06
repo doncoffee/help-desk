@@ -1,7 +1,7 @@
 package com.innowise.helpdesk.service.impl;
 
 import com.innowise.helpdesk.dto.UserDto;
-import com.innowise.helpdesk.service.JwtService;
+import com.innowise.helpdesk.service.jwt.JwtService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;

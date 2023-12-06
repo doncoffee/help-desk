@@ -1,11 +1,11 @@
-package com.innowise.helpdesk.service.impl;
+package com.innowise.helpdesk.service.jwt.impl;
 
 import com.innowise.helpdesk.dto.UserDto;
 import com.innowise.helpdesk.entity.jwt.JwtAuthenticationResponse;
 import com.innowise.helpdesk.mapper.impl.UserMapper;
 import com.innowise.helpdesk.repo.UserRepository;
-import com.innowise.helpdesk.service.AuthenticationService;
-import com.innowise.helpdesk.service.JwtService;
+import com.innowise.helpdesk.service.jwt.AuthenticationService;
+import com.innowise.helpdesk.service.jwt.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

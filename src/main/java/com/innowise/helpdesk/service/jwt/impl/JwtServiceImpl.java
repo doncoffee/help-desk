@@ -1,7 +1,7 @@
-package com.innowise.helpdesk.service.impl;
+package com.innowise.helpdesk.service.jwt.impl;
 
 import com.innowise.helpdesk.dto.UserDto;
-import com.innowise.helpdesk.service.JwtService;
+import com.innowise.helpdesk.service.jwt.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -17,6 +17,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+
+import static com.innowise.helpdesk.util.Constants.CLAIM_ROLE_NAME;
 
 @Service
 @RequiredArgsConstructor
@@ -50,6 +52,7 @@ public class JwtServiceImpl implements JwtService {
         return Jwts.builder()
                 .claims(extraClaims)
                 .subject(userDto.getEmail())
+                .claim(CLAIM_ROLE_NAME, userDto.getRole())
                 .issuedAt(new Date(System.currentTimeMillis()))
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24))
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)

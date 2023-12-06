@@ -1,0 +1,33 @@
+--liquibase formatted sql
+
+--changeset doncoffee:insert-values-into-tickets-table
+INSERT INTO tickets (name, description, created_on, desired_resolution_date, urgency, state, assignee_id, owner_id, approver_id, category_id)
+VALUES ('Task_1', 'for fun', CURRENT_DATE, CURRENT_DATE, 'CRITICAL', 'DRAFT', 1, 1, 3, 1),
+       ('Task_2', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'NEW', 2, 2, 4, 2),
+       ('Task_3', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'APPROVED', 1, 1, 3, 3),
+       ('Task_4', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'DECLINED', 4, 4, 5, 4),
+       ('Task_5', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'IN_PROGRESS', 5, 5, 1, 5),
+       ('Task_6', 'for fun', CURRENT_DATE, CURRENT_DATE, 'CRITICAL', 'DONE', 6, 6, 2, 6),
+       ('Task_7', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'CANCELLED', 3, 3, 4, 1),
+       ('Task_8', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'IN_PROGRESS', 4, 5, 2, 2),
+       ('Task_9', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'APPROVED', 2, 2, 3, 3),
+       ('Task_11', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'IN_PROGRESS', 2, 3, 6, 4),
+       ('Task_12', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'NEW', 1, 4, 3, 5),
+       ('Task_13', 'for fun', CURRENT_DATE, CURRENT_DATE, 'CRITICAL', 'IN_PROGRESS', 5, 2, 2, 6),
+       ('Task_14', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'APPROVED', 6, 1, 2, 1),
+       ('Task_15', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'IN_PROGRESS', 4, 1, 5, 2),
+       ('Task_16', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'APPROVED', 2, 3, 4, 3),
+       ('Task_17', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'IN_PROGRESS', 4, 6, 1, 4),
+       ('Task_18', 'for fun', CURRENT_DATE, CURRENT_DATE, 'CRITICAL', 'IN_PROGRESS', 3, 5, 4, 5),
+       ('Task_19', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'NEW', 1, 6, 5, 6),
+       ('Task_20', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'IN_PROGRESS', 1, 2, 5, 1),
+       ('Task_21', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'APPROVED', 6, 3, 2, 2),
+       ('Task_22', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'NEW', 1, 3, 4, 3),
+       ('Task_23', 'for fun', CURRENT_DATE, CURRENT_DATE, 'CRITICAL', 'IN_PROGRESS', 1, 1, 3, 4),
+       ('Task_24', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'NEW', 2, 4, 5, 5),
+       ('Task_25', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'IN_PROGRESS', 2, 4, 6, 6),
+       ('Task_26', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'NEW', 5, 6, 2, 1),
+       ('Task_27', 'for fun', CURRENT_DATE, CURRENT_DATE, 'LOW', 'APPROVED', 5, 2, 6, 2),
+       ('Task_28', 'for fun', CURRENT_DATE, CURRENT_DATE, 'HIGH', 'IN_PROGRESS', 4, 1, 6, 3),
+       ('Task_29', 'for fun', CURRENT_DATE, CURRENT_DATE, 'CRITICAL', 'DONE', 4, 2, 1, 4),
+       ('Task_30', 'for fun', CURRENT_DATE, CURRENT_DATE, 'AVERAGE', 'DONE', 5, 6, 2, 5);
